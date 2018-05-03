@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trains Trains Trains</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel='stylesheet' href='styles/style.css'>
+    <!-- <link rel="stylesheet" href="phase-01.css" type="text/css"> -->
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body background="round.png">
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class='row'>
+                <span class="glyphicon glyphicon-search col-lg-4 text-right" aria-hidden="true"></span>
+            <h1 class="text-left col-lg-8"> Trains And More Trains</h1>
+        </div>
+            <!-- <h2 class='text-center row'>Look at some trains</h2> -->
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> </span> Current Trains</div>
+            <div class="panel-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Insert movie rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"> </span> Add a Train</div>
+            <!-- <h2>Search Parameters</h2> -->
+            <div class="panel-body">
+                <label for="pwd">Train Name</label>
+                <input type="text" class="form-control" id="train-input">
+                <label for="pwd">Destination</label>
+                <input type="text" class="form-control" id="dest-input">
+                <label for="pwd">First Train Time (HH:mm - military time)</label>
+                <input type="text" class="form-control" id='time-input'>
+                <div class="form-group">
+                    <label for="pwd">Frequency(min)</label>
+                    <input type="text" class="form-control" id='freq-input'>
+                </div>
+            </div>
+            <div class="container">
+
+                <div class="form-group">
+                    <button type="button" id='submit' class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <script src="./javascript/app.js">
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCSPLeuDs-retKL_2glMQvZk8IUVQS3up8",
+            authDomain: "timesheet-2357a.firebaseapp.com",
+            databaseURL: "https://timesheet-2357a.firebaseio.com",
+            projectId: "timesheet-2357a",
+            storageBucket: "timesheet-2357a.appspot.com",
+            messagingSenderId: "1084555516539"
+        };
+        firebase.initializeApp(config);
+
+        var database = firebase.database();
+
+        // Initial Values
+        var name = "";
+        var role = "";
+        var date = 0;
+        var rate = 0;
+
+        // Capture Button Click
+        
+
+    </script>
+</body>
+
+</html>
